@@ -140,3 +140,19 @@ df = pd.DataFrame(data, index=timedelta_idx)
 print('Input DataFrame:\n',df)
 print("\nDataFrame Index Object Type:",df.index.dtype)
 
+'''
+PeriodIndex: Pandas PeriodIndex is used to represent regular periods in time, like quarters, months, or years.
+Example
+This example creates a Pandas DataFrame with PeriodIndex object.'''
+
+import pandas as pd
+# Creating a DataFrame with PeriodIndex
+period_idx = pd.period_range(start='2022-01', periods=10, freq='M')
+# create a DataFrame with PeriodIndex
+data = {'State': ['Washington', 'California', 'Texas', 'Florida', 'New York', 'Illinois', 'Pennsylvania', 'Ohio', 'Georgia', 'North Carolina'],
+        'Capital': ['Olympia', 'Sacramento', 'Austin', 'Tallahassee', 'Albany', 'Springfield', 'Harrisburg', 'Columbus', 'Atlanta', 'Raleigh'],
+        'Population': [7.6, 39.5, 29.5, 21.5, 19.8, 12.8, 12.8, 11.7, 10.7, 10.4],
+        'Region': ['West', 'West', 'South', 'South', 'Northeast', 'Midwest', 'Northeast', 'Midwest', 'South', 'South']}
+df = pd.DataFrame(data, index=period_idx)
+print('Input DataFrame:\n',df)
+print("\nDataFrame Index Object Type:",df.index.dtype)
