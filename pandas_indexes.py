@@ -123,3 +123,20 @@ df = pd.DataFrame(data, index=datetime_idx)
 print('Input DataFrame:\n',df)
 print("\nDataFrame Index Object Type:",df.index.dtype)
 
+'''
+TimeDeltaIndex  is used to represent the time intervals or durations in the data.
+It is used to represent the differences between two dates or times.
+'''
+# Following example creates a DataFrame with TimedeltaIndex using the timedelta_range() method.
+import pandas as pd
+# Creating a DataFrame with TimedeltaIndex
+timedelta_idx = pd.timedelta_range(start='1 days', periods=10)
+# create a DataFrame with TimedeltaIndex
+data = {'State': ['Washington', 'California', 'Texas', 'Florida', 'New York', 'Illinois', 'Pennsylvania', 'Ohio', 'Georgia', 'North Carolina'],
+        'Capital': ['Olympia', 'Sacramento', 'Austin', 'Tallahassee', 'Albany', 'Springfield', 'Harrisburg', 'Columbus', 'Atlanta', 'Raleigh'],
+        'Population': [7.6, 39.5, 29.5, 21.5, 19.8, 12.8, 12.8, 11.7, 10.7, 10.4]}  
+
+df = pd.DataFrame(data, index=timedelta_idx)
+print('Input DataFrame:\n',df)
+print("\nDataFrame Index Object Type:",df.index.dtype)
+
