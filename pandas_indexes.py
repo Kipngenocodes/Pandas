@@ -104,4 +104,22 @@ df = pd.DataFrame(data, index=multi_index)
 print('Input DataFrame:\n',df)
 print("\nDataFrame Index Object Type:",df.index.dtype)
 
+'''
+                DatetimeIndex
+Pandas DatetimeIndex object is used to represent the date and time values. 
+Nothing but it used for time-series data where each row is linked to a specific timestamp.
+'''
+# Following example creates a DataFrame with DatetimeIndex using the date_range() method.
+import pandas as pd
+# Creating a DataFrame with DatetimeIndex
+datetime_idx = pd.date_range('2022-01-01', periods=10)
+# create a DataFrame with DatetimeIndex
+data = {'A': ['Kipngeno', 'Chepkwony', 'Danny', 'Manning', 'David', 'Popal', 'FameOne', 'Chana', 'Giga', 'Kiprotich'],
+        'age': [25, 30, 35, 40, 45, 50, 55, 60, 65, 70], 
+        'Occupation': ['Engineer', 'Doctor', 'Teacher', 'Lawyer', 'Nurse', 'Pilot', 'Farmer', 'Driver', 'Carpenter', 'Plumber'],
+        'region': ['Nairobi', 'Kisumu', 'Mombasa', 'Nakuru', 'Eldoret', 'Kisii', 'Kakamega', 'Kericho', 'Nyeri', 'Nanyuki'],
+        'Flight type': ['Domestic', 'International', 'Domestic', 'International', 'Domestic', 'International', 'Domestic', 'International', 'Domestic', 'International']}
+df = pd.DataFrame(data, index=datetime_idx)
+print('Input DataFrame:\n',df)
+print("\nDataFrame Index Object Type:",df.index.dtype)
 
