@@ -90,3 +90,18 @@ MultiIndex
 Pandas MultiIndex is used to represent multiple levels or layers in index of Pandas data structures,
 which is also called as hierarchical.
 '''
+import pandas as pd
+# creating a MultiIndex
+arr = [['A', 'A', 'A', 'B', 'B', 'B'],
+         [1, 2, 3, 1, 2, 3], ['red', 'green', 'blue', 'red', 'green', 'blue']]
+multi_index = pd.MultiIndex.from_arrays(arr, names=('Letter', 'Number',  'Color'))
+# create a DataFrame with MultiIndex
+data = {'A': ['Kipngeno', 'Chepkwony', 'Danny', 'Manning', 'David', 'Popal'],
+        'age': [25, 30, 35, 40, 45,50]
+        , 'Occupation': ['Engineer', 'Doctor', 'Teacher', 'Law', 'Nurse', 'Pilot'],
+        'region': ['Nairobi', 'Kisumu', 'Mombasa', 'Nakuru', 'Eldoret', 'Kisii']}
+df = pd.DataFrame(data, index=multi_index)
+print('Input DataFrame:\n',df)
+print("\nDataFrame Index Object Type:",df.index.dtype)
+
+
