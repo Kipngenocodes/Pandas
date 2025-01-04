@@ -59,3 +59,34 @@ df = pd.DataFrame({'A': [1, 2, 3, 4, 5, 6, 7, 8, 9],
 
 print('Input DataFrame:\n',df)
 print("\nDataFrame Index Object Type:",df.index.dtype)
+
+
+''' 
+        Interval  index
+IntervalIndex is used to represent the intervals in the data.
+It is used to represent the ranges of values in the data.
+An IntervalIndex is used to represent intervals (ranges) in your data.
+This type of index will be created using the interval_range() method.
+
+'''
+# Following example creates a DataFrame with IntervalIndex using the interval_range() method.
+
+
+import pandas as pd
+# Creating a DataFrame with IntervalIndex
+interval_index = pd.interval_range(start=0, end=10)
+# create a DataFrame with IntervalIndex
+data = {'A': ['Kipngeno', 'Chepkwony', 'Danny', 'Manning', 'David', 'Popal', 'FameOne', 'Chana', 'Giga', 'Kiprotich'],
+        'age': [25, 30, 35, 40, 45, 50, 55, 60, 65, 70], 
+        'Occupation': ['Engineer', 'Doctor', 'Teacher', 'Lawyer', 'Nurse', 'Pilot', 'Farmer', 'Driver', 'Carpenter', 'Plumber'],
+        'region': ['Nairobi', 'Kisumu', 'Mombasa', 'Nakuru', 'Eldoret', 'Kisii', 'Kakamega', 'Kericho', 'Nyeri', 'Nanyuki']}
+
+df = pd.DataFrame(data, index=interval_index)
+print('Input DataFrame:\n',df)
+print("\nDataFrame Index Object Type:",df.index.dtype)
+
+'''
+MultiIndex
+Pandas MultiIndex is used to represent multiple levels or layers in index of Pandas data structures,
+which is also called as hierarchical.
+'''
