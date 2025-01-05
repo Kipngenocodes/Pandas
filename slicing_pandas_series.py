@@ -33,3 +33,18 @@ print(series[:5])  # Slicing from the beginning to index 4
 print(series[-5:])  # Slicing the last 5 elements
 print(series[:-5])  # Slicing all elements except the last 5
 print(series[:])  # Slicing all elements
+
+'''Slicing a Series by Label
+A Pandas Series is like a fixed-size Python dict in that you can get and set values by index labels.
+'''
+# Example retrieves multiple elements with slicing the label of a Series.
+s = pd.Series([1,2,3,4,5],index = ['a','b','c','d','e'])
+
+# Slice multiple elements
+print(s['a':'d'])
+
+'''
+Modifying Values after Slicing
+After slicing a Series, you can also modify the values, 
+by assigning the new values to those sliced elements.
+'''
