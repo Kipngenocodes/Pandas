@@ -33,3 +33,42 @@ index = ['a','b','c','d','e','f','g','h'], columns = ['A', 'B', 'C', 'D'])
 
 # Select all rows for multiple columns, say list[]
 print(df.loc[:,['A','C']])
+
+# Example selects the specific rows for the specific columns.
+df = pd.DataFrame(np.random.randn(8, 4),
+index = ['a','b','c','d','e','f','g','h'], columns = ['A', 'B', 'C', 'D'])
+
+# Select few rows for multiple columns, say list[]
+print(df.loc[['a','b','f','h'],['A','C']])
+
+# Example selecting a range of rows for all columns using the loc indexer.
+df = pd.DataFrame(np.random.randn(8, 4),
+index = ['a','b','c','d','e','f','g','h'], columns = ['A', 'B', 'C', 'D'])
+
+# Select range of rows for all columns
+print(df.loc['c':'e'])
+
+
+'''
+Integer Position-Based Indexing with .iloc
+The .iloc indexer is used for integer-based indexing, which allows you to select rows and columns by their numerical position. 
+This method is similar to standard python and numpy indexing (i.e. 0-based indexing).
+
+Single Integer: Selects data by its position, e.g., df.iloc[0].
+List of Integers: Select multiple rows or columns by their positions, e.g., df.iloc[[0, 1, 2]].
+Integer Slicing: Use slices with integers, e.g., df.iloc[1:3].
+
+Boolean Arrays: Similar to .loc, but for positions.
+'''
+#  Basic example that selects 4 rows for the all column using the iloc indexer.
+
+df = pd.DataFrame(np.random.randn(8, 4), columns = ['A', 'B', 'C', 'D'])
+
+print("Original DataFrame:\n", df)
+
+# select all rows for a specific column
+print('\nResult:\n',df.iloc[:4])
+
+
+
+
