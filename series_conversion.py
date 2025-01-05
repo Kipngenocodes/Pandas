@@ -52,3 +52,14 @@ s = pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])
 df = s.to_frame()
 print(df)
 print(type(df))
+
+'''
+Convert Series to String'''
+# Example
+# create a series
+s = pd.Series(['Bucharest', 'Tallin', 'Budapest', 'Goriga', 'Helsinki'])
+# convert the series to a string
+string_s = s.to_string()
+print(string_s)
+print(type(string_s))
+
