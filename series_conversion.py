@@ -21,3 +21,34 @@ s = pd.Series([1, 2, 3, 4, 5])
 # convert the series to a list
 list_s = s.to_list()
 print(list_s)  # Output: [1, 2, 3, 4, 5]
+print(type(list_s))  # Output: <class 'list'>
+
+'''
+Convert Series to NumPy Array'''
+# Example
+# create a series
+s = pd.Series(['Bucharest', 'Tallin', 'Budapest', 'Gorigia', 'Helsinki'])
+# convert the series to a numpy array
+array_s = s.to_numpy()
+print(array_s)  # Output: ['Bucharest' 'Tallin' 'Budapest' 'Gorigia' 'Helsinki']
+print(type(array_s))  # Output: <class 'numpy.ndarray'>
+
+'''
+Convert Series to Dictionary'''
+# Example
+# create a series
+s = pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])
+# convert the series to a dictionary
+dict_s = s.to_dict()
+print(dict_s)  # Output: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+print(type(dict_s))  # Output: <class 'dict'>
+
+'''
+Convert Series to DataFrame'''
+# Example
+# create a series
+s = pd.Series([1, 2, 3, 4, 5], index=['a', 'b', 'c', 'd', 'e'])
+# convert the series to a DataFrame
+df = s.to_frame()
+print(df)
+print(type(df))
