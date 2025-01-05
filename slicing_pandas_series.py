@@ -48,3 +48,13 @@ Modifying Values after Slicing
 After slicing a Series, you can also modify the values, 
 by assigning the new values to those sliced elements.
 '''
+# Example demonstrates how to modify the series values after accessing the range values through slice.
+s = pd.Series([1,2,3,4,5])
+
+# Display the original series 
+print("Original Series:\n",s)
+
+# Modify the values of first two elements
+s[:2] = [100, 200]
+
+print("Series after modifying the first two elements:\n",s)
