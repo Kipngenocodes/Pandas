@@ -71,4 +71,23 @@ print('\nResult:\n',df.iloc[:4])
 
 
 
+'''
+Direct Indexing with Brackets "[]"
+Direct indexing with [] is a quick and intuitive way to access data, 
+similar to indexing with Python dictionaries and NumPy arrays.
+It’s often used for basic operations −
+    Single Column: Access a single column by its name.
+    Multiple Columns: Select multiple columns by passing a list of column names.
+    Row Slicing: Slice rows using integer-based indexing.
+'''
+# Example demonstrates how to use the direct indexing with brackets for accessing a single column.
+df = pd.DataFrame(np.random.randn(8, 4), columns = ['A', 'B', 'C', 'D'])
+# Access a single column
+print("Original DataFrame:\n",df)
+print("\nAccessing a single column:\n",df['A'])
 
+# Example selects the multiple columns using the direct indexing.
+df = pd.DataFrame(np.random.randn(8, 4), columns = ['A', 'B', 'C', 'D'])
+# Select multiple columns
+print("\nOriginal DataFrame:\n",df)
+print("\nSelecting multiple columns:\n",df[['A','C']])
