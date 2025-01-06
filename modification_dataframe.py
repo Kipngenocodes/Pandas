@@ -43,3 +43,22 @@ df = df.rename(index={'A': 'Person 1', 'B': 'Person 2', 'C': 'Person 3'}, inplac
 # print the modified DataFrame
 print("\nDataFrame after renaming rows:")
 print(df)
+
+# adding or insering a New Column to a DataFrame
+# Doing it directly by assigning a new column label and values to the DataFrame
+# create a DataFrame
+df = pd.DataFrame({'firt_name': ['John', 'Jane', 'Mary'],
+                   'last_name': ['Doe', 'Smith', 'Johnson'],
+                   'age': [34, 29, 42],
+                   'city': ['Chicago', 'Los Angeles', 'New York'],
+                   'Marital Status': ['Single', 'Married', 'Divorced']},
+                  index=['A', 'B', 'C'])
+
+# print the original DataFrame
+print("Original DataFrame:")
+print(df)
+# add a new column to the DataFrame
+df['City of Birth'] = ['San Diego', 'Pocattello', 'Boston']
+# print the modified DataFrame
+print("\nDataFrame after adding a new column:")
+print(df)
