@@ -108,7 +108,7 @@ df = pd.DataFrame({'weather patterns':['Raining', 'Windy', 'Sunny'],
 
 print('Original DataFrame:', df, sep='\n')
 # replace the contents of a column using .replace()
-df.replace({'weather patterns': 'Windy', 'city':'Harare'}, {'Glommy', 'Lahore'}, inplace= True)
+df.replace({'weather patterns': 'Windy', 'city':'Harare'}, 'Glommy', inplace= True)
 # Display updated DataFrame
 print("DataFrame after replacing column 'A':")
 print(df)
