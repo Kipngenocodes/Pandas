@@ -112,3 +112,19 @@ df.replace({'weather patterns': 'Windy', 'city':'Harare'}, 'Glommy', inplace= Tr
 # Display updated DataFrame
 print("DataFrame after replacing column 'A':")
 print(df)
+
+
+# Deleting column in Dataframes
+# Deleting single or multiple columns of a DataFrame can be done by using the DataFrame.drop() method.
+# Create a DataFrame
+df = pd.DataFrame({'A': [1, 2, 3],'B': [4, 5, 6],'C': [7, 8, 9]})
+
+# Display the original DataFrame
+print("Original DataFrame:", df, sep='\n')
+
+# Delete columns 'A' and 'B'
+df = df.drop(columns=['A', 'B'])
+
+# Display updated DataFrame
+print("DataFrame after deleting columns 'A' and 'B':")
+print(df)
