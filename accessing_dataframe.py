@@ -51,3 +51,15 @@ print(result)
 Modifying Values After Slicing
 After slicing a DataFrame, you can modify the sliced values directly.
 This can be done by assigning new values to the selected elements.'''
+
+# create a DataFrame
+df = pd.DataFrame([[1, 2, 3], [4, 5, 6], [7, 8, 9]], columns=['A', 'B', 'C'])
+# display the DataFrame
+print("Original DataFrame:")
+print(df)
+# slicing and  modifying the values of the first two rows
+df.iloc[0:2, :] = [[10, 20, 30], [40, 50, 60]]
+print("\nDataFrame after modifying the first two rows:")
+print(df)
+
+
