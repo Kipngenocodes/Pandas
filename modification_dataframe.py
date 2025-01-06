@@ -99,3 +99,16 @@ df['city'] = ['San Diego', 'Pocatello', 'Boston']
 # print the modified DataFrame
 print("\nDataFrame after replacing the contents of a column:")
 print(df)
+
+# replacing content of a column in a dataframe using .replace()
+# create a DataFrame
+df = pd.DataFrame({'weather patterns':['Raining', 'Windy', 'Sunny'],
+                   'city': ['Kansas', 'Harare', 'Pretoria']}
+                  , index=['A', 'B', 'C'])
+
+print('Original DataFrame:', df, sep='\n')
+# replace the contents of a column using .replace()
+df.replace({'weather patterns': 'Windy', 'city':'Harare'}, {'Glommy', 'Lahore'}, inplace= True)
+# Display updated DataFrame
+print("DataFrame after replacing column 'A':")
+print(df)
