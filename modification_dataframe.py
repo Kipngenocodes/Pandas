@@ -80,3 +80,22 @@ new_df.insert(3, 'Country', ['Denmark', 'China', 'Canada'])
 # print the modified DataFrame
 print("\nDataFrame after inserting a new column:")
 print(new_df)
+
+
+# replacing the Contents of a Column in a dataframe
+# create a DataFrame
+df = pd.DataFrame({'firt_name': ['John', 'Jane', 'Mary'],
+                   'last_name': ['Doe', 'Smith', 'Johnson'],
+                   'age': [34, 29, 42],
+                   'city': ['Chicago', 'Los Angeles', 'New York'],
+                     'Marital Status': ['Single', 'Married', 'Divorced']},
+                    index=['A', 'B', 'C'])
+
+# print the original DataFrame
+print("Original DataFrame:")
+print(df)
+# replace the contents of a column
+df['city'] = ['San Diego', 'Pocatello', 'Boston']
+# print the modified DataFrame
+print("\nDataFrame after replacing the contents of a column:")
+print(df)
