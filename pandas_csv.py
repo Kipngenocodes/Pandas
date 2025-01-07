@@ -13,9 +13,9 @@ or
 pandas.read_csv(filepath_or_buffer, sep='\t', delimiter=None, header='infer',
 names=None, index_col=None, usecols=None)
 '''
-# # using the  read_csv function to read a csv file
-# df = pd.read_csv('employee_data.csv')
-# print(df)
+# using the  read_csv function to read a csv file
+df = pd.read_csv('employee_data.csv')
+print(df)
 
 #converting the data into a DataFrame object
 df = pd.read_csv("employee_data.csv", dtype={'Salary': np.float64})
