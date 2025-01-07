@@ -20,3 +20,9 @@ obj = StringIO(data)
 df = pd.read_csv(obj)
 
 print(df)
+
+# Alternatives to Read CSV Files
+url ='updated_employee_data.csv'
+# read CSV into a Pandas DataFrame using the read_table() function
+df = pd.read_table(url,sep=',')
+print(df.head(5))

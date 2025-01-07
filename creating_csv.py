@@ -1,3 +1,4 @@
+# Re-importing libraries and regenerating the script due to reset
 import pandas as pd
 import random
 
@@ -29,6 +30,17 @@ def generate_employee_data(num_employees):
         data.append(employee)
     return data
 
+# Function to categorize employees based on salary
+def categorize_salary(salary):
+    if salary < 150000:
+        return "Intern"
+    elif 150000 <= salary < 500000:
+        return "Junior"
+    elif 500000 <= salary < 1000000:
+        return "Senior"
+    else:
+        return "Management"
+
 # Generate 200 employees
 num_employees = 200
 employee_data = generate_employee_data(num_employees)
@@ -36,8 +48,15 @@ employee_data = generate_employee_data(num_employees)
 # Create DataFrame
 df = pd.DataFrame(employee_data)
 
-# Save to CSV
-file_path = "/mnt/data/employee_data.csv"
-df.to_csv(file_path, index=False)
+# Update salaries to range between $100,000 and $2,000,000 and add category
+df['Salary'] = [random.randint(100000, 2000000) for _ in range(len(df))]
+df['Category'] = df['Salary'].apply(categorize_salary)
 
-file_path
+# Save updated DataFrame to the specified path
+updated_file_path = r"C:\Users\p1\OneDrive\Desktop\Pandas\updated_employee_data.csv"
+df.to_csv(updated_file_path, index=False)
+
+updated_file_path
+
+
+
