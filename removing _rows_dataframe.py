@@ -33,5 +33,20 @@ print('Dropping Rows by Labels using the drop() method:')
 print(results)
 
 
-    
+# removing the rows based on conditions
+# create a dataframe
+df = pd.DataFrame({ 'A': ['A0', 'A1', 'A2', 'A3'],
+                   'B': ['B0', 'B1', 'B2', 'B3'],
+                  'C': ['C0', 'C1', 'C2', 'C3'],
+                  'D': ['D0', 'D1', 'D2', 'D3']}, index=[1, 2, 3, 4])
+
+print("Original DataFrame:", df)
+
+# removing rows based on conditions
+# condition to remove rows where column 'A' is equal to 'A1'
+results = df[(df['A'] != 'A1')]
+print("Removing rows where column 'A' is equal to 'A1':")
+print(results)
+
+
 
