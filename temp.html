@@ -1,9 +1,4 @@
-import pandas as pd
-from io import StringIO
 
-
-# create a html string
-html_string = """
 <html>
 <head>
     <title>Employee Data</title>
@@ -46,17 +41,3 @@ html_string = """
     </table>
 </body>
 </html>
-"""
-
-# Save to a temporary file and read
-with open("temp.html", "w") as f:
-    f.write(html_string)
-# output the dataframe 
-df = pd.read_html("temp.html")[0]
-print(df)
-
-print('\n')
-
-# Reading the HTML string using pandas and stringio
-dfs = pd.read_html(StringIO(html_string))
-print(dfs[0])
