@@ -28,3 +28,16 @@ df2 = pd.DataFrame({
 # Concatinating the two dataframes along the row axis (axis=0)
 df_concat = pd.concat([df1, df2], axis=0)
 print(df_concat)
+print('\n')
+# Concatenating with Keys to help differentiating between the two dataframes
+df_concat_with_keys = pd.concat([df1, df2], keys=['df1', 'df2'])
+print(df_concat_with_keys)
+
+print('\n')
+# Ignoring Indexes During Concatenation
+print(pd.concat([df1,df2],keys=['x','y'],ignore_index=True))
+
+print('\n')
+# Concatenating Along Columns
+df_concat_columns = pd.concat([df1, df2], axis=1)
+print(df_concat_columns)
