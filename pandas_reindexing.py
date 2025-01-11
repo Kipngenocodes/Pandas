@@ -13,4 +13,17 @@ set of labels along a specified axis (rows or columns). This process can accompl
     Pandas will insert a missing value (NaN) for that label.
     Filling Missing Data: You can specify how to fill in missing values that result from reindexing, 
     using various filling methods.
+It allows you to modify the row and column labels of Pandas data structures.
 '''
+# The reindex() method is the primary tool for performing reindexing in Pandas.
+# It allows you to modify the row and column labels of Pandas data structures.
+
+# reindexing a pandas series
+new_series = pd.Series([1, 2, 3, 4, 5, 6, ], index=['a', 'b', 'c', 'd', 'e', 'f'])
+
+# print the original series
+print("Original Series:\n ", new_series)
+
+s_indexed = new_series.reindex(['b', 'a', 'f', 'd', 'c', 'e'])
+# print the reindexed series
+print("Reindexed Series:\n ", s_indexed)
