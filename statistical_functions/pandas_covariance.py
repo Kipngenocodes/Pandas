@@ -15,3 +15,12 @@ series2 = pd.Series(np.random.randn(100))
 print("Series 1: ", series1.head())
 
 print(series1.cov(series2))
+
+print('\n')
+# working with dataframes
+data_frame = pd.DataFrame(np.random.randn(100, 4), columns=['A', 'B', 'C', 'D'])
+
+print(data_frame.head())
+print('\n')
+print(data_frame.cov())
+print(data_frame['A'].cov(data_frame['B']))
