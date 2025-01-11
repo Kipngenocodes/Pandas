@@ -37,3 +37,8 @@ print(df)
 print("Iterated Output:")
 for key,value in df.items():
    print(key,value)
+
+print('\n')
+# iterating over the rows of the DataFrame using iterrows()
+for row_index,row in df.iterrows():
+   print(row_index,row)
