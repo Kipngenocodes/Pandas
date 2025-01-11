@@ -22,3 +22,8 @@ sorted_pd = unsorted_pd.sort_index()
 # output
 print('Output of sorted data \n', sorted_pd
       )
+
+
+# Controlling the order of sorting - By default, sort_index() sorts in ascending order.
+sorted_df = unsorted_pd.sort_index(ascending=False)
+print("\nOutput Sorted DataFrame:\n", sorted_df)
