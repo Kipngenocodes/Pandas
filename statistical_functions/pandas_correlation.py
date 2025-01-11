@@ -10,3 +10,4 @@ including Pearson (default), Spearman, and Kendall.'''
 data_frame = pd.DataFrame(np.random.randn(10, 5), columns=['a', 'b', 'c', 'd', 'e'])
 
 print(data_frame['a'].corr(data_frame['b']))
+print(data_frame.corr())
