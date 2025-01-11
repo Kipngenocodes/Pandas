@@ -42,3 +42,24 @@ print('\n')
 # iterating over the rows of the DataFrame using iterrows()
 for row_index,row in df.iterrows():
    print(row_index,row)
+   
+print('\n')
+# Iterate Over DataFrame as Namedtuples
+'''
+The itertuples() method will return an iterator
+yielding a named tuple for each row in the DataFrame.
+The first element of the tuple will be the row’s corresponding index value, 
+while the remaining values are the row values. 
+ '''
+# Iterate Through DataFrame rows
+print("Iterated Output:")
+for row in df.itertuples():
+   print(row)
+   
+
+print('\n')
+# Iterating Through DataFrame Columns
+# Iterate Through DataFrame Columns
+print("Output:")
+for col in df:
+   print(col)
