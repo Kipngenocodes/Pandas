@@ -27,3 +27,17 @@ print("Original Series:\n ", new_series)
 s_indexed = new_series.reindex(['b', 'a', 'f', 'd', 'c', 'e'])
 # print the reindexed series
 print("Reindexed Series:\n ", s_indexed)
+
+# Reindexing a pandas DataFrame
+df = pd.DataFrame({'First Name': ['Tom', 'Nick', 'John', 'Kipsang', 'Kipngeno'],
+                   'Last Name': ['Smith', 'Hunter', 'Gorgina', 'Baker', 'Lungat'],
+                    'City': ['Seattle', 'Maryville', 'Pasco', 'Gayana', 'Rio De Janeiro'] })   
+
+# printing the original DataFrame
+print("Original DataFrame:\n", df)
+
+# reindexed the DataFrame
+df_reindexed = df.reindex(index=['John', 'Kipsang', 'Tom', 'kipsang', 'Nick'],
+                          columns= ['Last Name', 'City', 'First Name'])
+# print the reindexed DataFrame
+print("Reindexed DataFrame:\n", df_reindexed)
