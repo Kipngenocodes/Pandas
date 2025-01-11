@@ -14,3 +14,6 @@ print(a_series.pct_change())
 
 df = pd.DataFrame(np.random.randn(5, 2))
 print(df.pct_change())
+
+# applying pct_change() to a DataFrame with a specified axis
+print(df.pct_change(axis=1))
