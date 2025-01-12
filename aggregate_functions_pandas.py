@@ -62,3 +62,59 @@ print("\nSum of the series: ", s.sum())
 
 # sum of the values over the requested axis
 print("\nSum of the values over the requested axis: \n", df.sum(axis=0))
+
+# calculating the median of the series
+print("\nMedian of the series: ", s.median())
+# calculating the median of the dataframe
+print("\nMedian of the dataframe: \n", df.median())
+# calculating the median of the dataframe2
+print("\nMedian of the dataframe2: \n", df2.median())
+
+
+# checking for min and max on the series
+print("\nMin of the series: ", s.min())
+print("\nMax of the series: ", s.max())
+# checking for min and max on the dataframe
+print("\nMin of the dataframe: \n", df.min())
+print("\nMax of the dataframe: \n", df.max())
+# checking for min and max on the dataframe2
+print("\nMin of the dataframe2: \n", df2.min())
+print("\nMax of the dataframe2: \n", df2.max())
+
+
+# checking for the count of the series
+print("\nCount of the series: ", s.count())
+# checking for the count of the dataframe
+print("\nCount of the dataframe: \n", df.count())
+# checking for the count of the dataframe2
+print("\nCount of the dataframe2: \n", df2.count())
+
+# checking for quantile of the series
+print("\nQuantile of the series: ", s.quantile(0.5))
+# checking for quantile of the dataframe
+print("\nQuantile of the dataframe: \n", df.quantile(0.5))
+# checking for quantile of the dataframe2
+print("\nQuantile of the dataframe2: \n", df2.quantile(0.5))
+
+# checking for the kurtosis of the series
+print("\nKurtosis of the series: ", s.kurtosis())
+# checking for the kurtosis of the dataframe
+print("\nKurtosis of the dataframe: \n", df.kurtosis())
+# checking for the kurtosis of the dataframe2
+print("\nKurtosis of the dataframe2: \n", df2.kurtosis())
+
+# checking for the skewness of the series
+print("\nSkewness of the series: ", s.skew())
+# checking for the skewness of the dataframe
+print("\nSkewness of the dataframe: \n", df.skew())
+# checking for the skewness of the dataframe2
+print("\nSkewness of the dataframe2: \n", df2.skew())
+
+# claculate the sem of the series
+print("\nSem of the series: ", s.sem())
+# claculate the sem of the dataframe
+print("\nSem of the dataframe: \n", df.sem())
+# claculate the sem of the dataframe2
+print("\nSem of the dataframe2: \n", df2.sem())
+# claculate the std of the series
+print("\nStd of the series: ", s.std())
