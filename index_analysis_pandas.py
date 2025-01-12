@@ -37,3 +37,7 @@ print('\n Minimum value index: \n', df['D'].idxmin())
 # Returns the index of the first occurrence of the unique value
 print('\n Unique value index: \n', df['E'].unique())
 print('\n unique value index: \n', df['D'].unique())
+
+# Returns a Series containing counts of unique values.
+print('\n Count value index: \n', df['E'].value_counts())
+print('\n Count value index: \n', df['D'].value_counts())
