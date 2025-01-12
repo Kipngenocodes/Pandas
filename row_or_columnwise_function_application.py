@@ -18,3 +18,7 @@ print('\n Result on column-wise:\n',result)
 # Applying a Function Row-wise
 result = df.apply(np.mean, axis=1)
 print('\nResult on row-wise :\n',result)
+
+# Applying a Lambda Function
+result = df.apply(lambda x: x.max() - x.min())
+print('Result:\n',result)
