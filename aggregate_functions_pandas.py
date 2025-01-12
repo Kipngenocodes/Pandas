@@ -48,3 +48,17 @@ df2= pd.DataFrame({'A': [10, 20, 30, 40, 50],
 print("Series: \n ", s)
 print("\nDataFrame: \n", df)
 print("\nDataFrame2: \n", df2)
+
+
+# calculate the mean of the series
+print("\nMean of the series: ", s.mean())
+
+# calculate the mean of the dataframe
+print("\nMean of the dataframe: \n", df.mean()) 
+print('\n Mean of the dataframe2: \n', df2.mean())
+
+# sum of the values of the series
+print("\nSum of the series: ", s.sum())
+
+# sum of the values over the requested axis
+print("\nSum of the values over the requested axis: \n", df.sum(axis=0))
