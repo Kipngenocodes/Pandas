@@ -29,3 +29,25 @@ print(pd.get_option('display.max_rows'))
 
 # checking the maximum number of columns being displayed
 print(pd.get_option('display.max_columns'))
+
+# Setting new options
+pd.set_option('display.max_rows', 10)
+pd.set_option('display.max_columns', 5)
+
+print(pd.get_option('display.max_rows'))
+print(pd.get_option('display.max_columns'))
+
+# Resetting the options to their default values
+pd.reset_option('display.max_rows')
+pd.reset_option('display.max_columns')
+
+print(pd.get_option("display.max_rows"))
+print(pd.get_option("display.max_column"))
+
+# Describing Maximum Rows Displayed
+pd.describe_option("display.max_rows")
+
+# Temporarily Changing Maximum Rows Displayed
+with pd.option_context("display.max_rows",10):
+   print(pd.get_option("display.max_rows"))
+print(pd.get_option("display.max_rows"))
