@@ -28,3 +28,9 @@ series = pd.Series(np.random.randint(0, 100, size=100))
 # applying a weighted window to the series
 result = series.rolling(window=5, win_type= 'triang').mean()
 print('\n Weighted Window: \n', result)
+
+# Expanding windows 
+df = pd.DataFrame(np.random.randn(10, 4),
+   index = pd.date_range('1/1/2000', periods=10),
+   columns = ['A', 'B', 'C', 'D'])
+print(df.expanding(min_periods=3).mean())
