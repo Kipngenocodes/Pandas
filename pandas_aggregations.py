@@ -29,3 +29,12 @@ df = pd.DataFrame([[1, 2, 3, 1],
 print("Input DataFrame:\n",df)
 result = df.agg(['sum', 'min'])
 print("\nResults:\n",result)
+
+
+# applying different functions to different columns
+result = df.agg(['sum', 'min', 'max'], axis=1)
+print("\nResults:\n",result)
+
+# Customizing the results
+result = df.agg(x=('A', 'max'), y=('B', 'min'), z=('C', 'mean'))
+print("\nResults:\n",result)
