@@ -34,3 +34,9 @@ df = pd.DataFrame(np.random.randn(10, 4),
    index = pd.date_range('1/1/2000', periods=10),
    columns = ['A', 'B', 'C', 'D'])
 print(df.expanding(min_periods=3).mean())
+
+# Exponentially weighted window
+df = pd.DataFrame(np.random.randn(10, 4),
+   index = pd.date_range('1/1/2000', periods=10),
+   columns = ['A', 'B', 'C', 'D'])
+print(df.ewm(com=0.5).mean())
