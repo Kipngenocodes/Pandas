@@ -25,3 +25,10 @@ df = pd.DataFrame(
 
 # Display the input DataFrame
 print('Original MultiIndexed DataFrame:\n', df)
+
+
+# Select data based on the boolean indexing
+print('\n Selected data:')   
+mask = df['D'] > 75
+
+print(df[mask])
