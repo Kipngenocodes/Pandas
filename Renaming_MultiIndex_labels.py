@@ -17,3 +17,16 @@ print(df)
 new_df = df.rename(columns={'A': 'X', 'B': 'Y', 'C':'H'})
 print("\nDataFrame after renaming columns:")
 print(new_df)
+
+
+# renaming the specific labels
+index = pd.MultiIndex.from_tuples([('A', 'a'), ('B', 'b'), ('C', 'c'), ('D', 'd')])
+
+# Create a dataframe with the MultiIndex
+df = pd.DataFrame({'A': [1, 2, 3, 4], 'B': [5, 6, 7, 8]}, index=index)
+print("\nOriginal DataFrame:", df)
+
+# Renaming specific labels
+df = df.rename(index={'A': 'X', 'B': 'Y', 'C':'H', 'D':'I'})
+print("\nDataFrame after renaming index labels:")
+print(df)
