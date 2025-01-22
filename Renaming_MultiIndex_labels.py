@@ -19,14 +19,24 @@ print("\nDataFrame after renaming columns:")
 print(new_df)
 
 
-# renaming the specific labels
-index = pd.MultiIndex.from_tuples([('A', 'a'), ('B', 'b'), ('C', 'c'), ('D', 'd')])
+# Create a multiindex Object
+multi_index = pd.MultiIndex.from_tuples([('A', 'Alex'), ('A', 'Amanda'), ('A', 'Billah'), ('A', 'Bilkan'),
+                                  ('B', 'Alex'), ('B', 'Amanda'), ('B', 'Billah'), ('B', 'Bilkan'),
+                                ('C', 'Alex'), ('C', 'Amanda'), ('C', 'Billah'), ('C', 'Bilkan')])
 
-# Create a dataframe with the MultiIndex
-df = pd.DataFrame({'A': [1, 2, 3, 4], 'B': [5, 6, 7, 8]}, index=index)
-print("\nOriginal DataFrame:", df)
+# Create a dataframe 
+data =  {'Age': [25, 28, 30, 32, 25, 28 , 30, 32, 25, 28, 30, 32], 
+         'Gender': [1, 1, 1, 1, 0, 0 , 0, 0, 0, 0, 0, 0]} 
+df_dataframe = pd.DataFrame(data, index=multi_index)
+print("\nOriginal MultiIndexed DataFrame:")
+print(df_dataframe)
 
-# Renaming specific labels
-df = df.rename(index={'A': 'X', 'B': 'Y', 'C':'H', 'D':'I'})
-print("\nDataFrame after renaming index labels:")
-print(df)
+# Renaming the columns 
+df_renamed  = df_dataframe.rename(columns={'X': "Year of Birth", 'Y': "BestNumber"})
+print("\nDataFrame after renaming columns:")
+print(df_renamed)
+# Renaming the index levels
+df_renamed_index = df_dataframe.rename_axis(index={'level_0': 'Category', 'level: 1': 'Name'},
+                                            columns={'Age': "Age", 'Gender': "Gender"})
+print("\nDataFrame after renaming index levels:")
+print(df_renamed_index)
