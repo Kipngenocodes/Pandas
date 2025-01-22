@@ -11,3 +11,9 @@ df_bool_index = df >10
 
 # output the boolean
 print(df_bool_index)
+
+# Filtering Data using the Boolean Index with .loc
+s = (df['A'] > 2)
+
+# Filter DataFrame using the Boolean Index with .loc
+print('Output Filtered DataFrame:\n',df.loc[s, 'B'])
