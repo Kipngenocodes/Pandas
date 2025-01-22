@@ -13,7 +13,10 @@ df_bool_index = df >10
 print(df_bool_index)
 
 # Filtering Data using the Boolean Index with .loc
-s = (df['A'] > 2)
+s = (df['A'] > 20)
 
 # Filter DataFrame using the Boolean Index with .loc
-print('Output Filtered DataFrame:\n',df.loc[s, 'B'])
+print('\n Output Filtered DataFrame:\n',df.loc[s, 'B'])
+
+# Filter data using .iloc and the Boolean Index
+print('\nOutput Filtered Data:\n',df.iloc[s.values, 1])
