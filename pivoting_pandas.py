@@ -12,3 +12,9 @@ df = pd.DataFrame({"Col1": range(12),"Col2": ["A", "A", "A", "B", "B","B", "C", 
 
 # output the  following dataframe:
 print('\n Original DataFrame:\n', df)
+
+# Pivoting the Dataframe
+pivoted_df =  df.pivot(index="date", columns="Col2", values="Col1")
+
+# Display the output
+print('\nPivoted DataFrame:\n', pivoted_df)
