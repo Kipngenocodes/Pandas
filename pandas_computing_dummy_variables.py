@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import sklearn
 
 
 
@@ -16,3 +17,7 @@ print('\n Original Dataframe:', dataframe)
 # Create dummy variables for the keys column
 dummies = pd.get_dummies(dataframe["Keys"])
 print('\n Resultant Dummy Variables:\n',dummies)
+
+# Creating dummies with prefixes
+new_dummies = pd.get_dummies(dataframe["Keys"], prefix='key_')
+print('\n Resultant Dummy Variables with Prefix:\n',new_dummies)
