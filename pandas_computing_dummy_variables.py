@@ -21,3 +21,11 @@ print('\n Resultant Dummy Variables:\n',dummies)
 # Creating dummies with prefixes
 new_dummies = pd.get_dummies(dataframe["Keys"], prefix='key_')
 print('\n Resultant Dummy Variables with Prefix:\n',new_dummies)
+
+'''Handling Collinearity While Creating Dummy Variables
+To avoid collinearity issues in statistical models,
+you can drop the first dummy variable by setting the drop_first parameter to True.'''
+# Create dummy variables for the keys column with drop_first=True
+dummies = pd.get_dummies(dataframe["keys"], drop_first=True)
+
+print('Resultant Dummy Variables with Prefix:\n',dummies)
