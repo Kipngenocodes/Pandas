@@ -40,3 +40,13 @@ print(series1 < series2)
 # Comparing categorical data to a scalar value
 print("\nComparison with scalar value (series1 > '2'):")
 print(series1 > '2')
+
+# Creating another categorical Series for comparison
+series3 = pd.Series([2, 2, 2, 1, 1, 3, 1, 2]).astype(CategoricalDtype(ordered=True))
+data2 = ['2', '4', '3', '1', '2', '1', '4']
+series2 = pd.Series(data2).astype(CategoricalDtype(categories=['1', '2', '3', '4'], ordered=True))
+try:
+    print("Attempting to compare differently ordered two Series objects:")
+    print(series1 > series2)
+except TypeError as e:
+    print("TypeError:", str(e))
