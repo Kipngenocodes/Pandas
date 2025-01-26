@@ -31,3 +31,9 @@ print("\nNew Categories Set:\n", s_new_categories)
 
 # Sort the categorical series without any predefined order (lexical sorting)
 print("Lexical Sorting:\n", s.sort_values())
+
+# Define a custom order for the categories
+s = s.cat.set_categories(['b', 'a', 'c'], ordered=True)
+
+# Sort the categorical series with the defined order
+print("\nSorted with Defined Category Order:\n", s.sort_values())
