@@ -26,3 +26,8 @@ filled_df = new_df.fillna(0)
 # Output the DataFrame after filling missing values
 print("\nResultant DataFrame after NaN replaced with '0':")
 print(filled_df)
+
+# Dropping the missing values 
+dropped_df = new_df.dropna()
+# Output the DataFrame after dropping missing values
+print(dropped_df)
