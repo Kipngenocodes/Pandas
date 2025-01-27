@@ -22,3 +22,9 @@ The fillna() method in Pandas is used to fill missing values (NA or NaN) with a 
 such as any specific number.'''
 df.fillna(0, inplace=True)
 print("\nDataFrame after replacing missing values with 0:\n", df)
+
+#  Forward and backward filling.
+'''You can also propagate the last valid observation forward or backward to fill gaps using the ffill() and bfill() methods respectively.
+        The ffill() method fills the missing values with the value from the previous row.	
+        The bfill() method fills the missing values with the value from the next row.
+'''
