@@ -31,3 +31,4 @@ These functions return a Boolean Series indicating the presence of missing value
 
 series  = pd.Series([pd.Timestamp("2023-12-12"), pd.NaT])
 print(series.isna())  # Output: [False, True]
+
