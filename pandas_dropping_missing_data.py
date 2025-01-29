@@ -54,3 +54,21 @@ print(df)
 # Drop the rows with a threshold 
 result = df.dropna(thresh=2)
 print('\nResultant DataFrame after removing row:\n',result)
+
+# Drop Columns with Any Missing Values
+'''
+To drop columns that contain any missing values, 
+then we can use axis parameter of the dropna() method to select the columns.'''
+
+dataset = {"Student_name": ["Ajay", "Krishna", "Deepak", "Swati"], 
+"Roll_number": [23, 45, np.nan, 18],
+"Major_Subject": ["Maths", "Physics", "Arts", "Political science"], 
+"Marks": [57, np.nan, 98, np.nan]}
+
+df = pd.DataFrame(dataset, index= [1, 2, 3, 4])
+print("Original DataFrame:")
+print(df)
+
+# Drop column with any missing values
+result = df.dropna(axis='columns', how='any')
+print('\nResultant DataFrame after removing columns:\n',result)
