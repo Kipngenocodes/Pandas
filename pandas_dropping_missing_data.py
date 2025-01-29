@@ -40,3 +40,17 @@ where:
 # Expected output wont change becaue there are no rows with all missing values
 result= df.dropna(how='all')
 print('\nResultant DataFrame after removing row:\n',result)
+
+# Create a dataframe with random data and include missing data with threshold
+dataset = {"Student name": ["Ajay", "Krishna", "Deepak", "Swati"], 
+"Roll number": [23, np.nan, np.nan, 18],
+"Major Subject": ["Maths", np.nan, "Arts", "Political science"], 
+"Marks": [57, np.nan, 98, np.nan]}
+
+df = pd.DataFrame(dataset, index= [1, 2, 3, 4])
+print("Original DataFrame:")
+print(df)
+
+# Drop the rows with a threshold 
+result = df.dropna(thresh=2)
+print('\nResultant DataFrame after removing row:\n',result)
