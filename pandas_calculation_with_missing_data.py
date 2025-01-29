@@ -13,8 +13,12 @@ df.loc[1,'B'] = np.nan
 df.loc[2,'C'] = np.nan
 # Create another dataframe with 5 rows and 3 columns with missing values
 df2 = pd.DataFrame(np.random.randint(0,100,size=(5, 3)), columns = list('ABC'))
-df2.loc[2,'A'] = np.na
+df2.loc[2,'A'] = np.nan
 df2.loc[3,'B'] = np.nan
 
 # Output the dataframe
 print(df)
+print('\n a new dataframe \n ', df2)
+
+result = df + df2
+print("\nResult of adding df and df2:\n", result)
