@@ -36,3 +36,7 @@ where:
 '''
 
 
+# Drop rows where all values are missing
+# Expected output wont change becaue there are no rows with all missing values
+result= df.dropna(how='all')
+print('\nResultant DataFrame after removing row:\n',result)
