@@ -33,3 +33,8 @@ result = df['B'].value_counts()
 
 print('\nThe unique values:')
 print(result)
+
+# Checking for the unique values in column 'C'
+result = df['C'].value_counts()
+print('\nThe unique values:')
+print(result)
