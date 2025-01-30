@@ -41,3 +41,9 @@ resultant = df.drop_duplicates()
 # Display the resultant Duplicates
 print('\nResult after finding the duplicates:')
 print(resultant) 
+
+# Drop duplicates in the DataFrame At specific columns
+resultant = df.drop_duplicates(subset=['Name', 'Score'])
+# Display the resultant Duplicates
+print('\nResult after finding the duplicates:')
+print(resultant)
