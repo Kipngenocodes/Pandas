@@ -1,6 +1,4 @@
 import pandas as pd
-import numpy as np
-
 
 '''
 If a dataset contains the repeated index labels then we call it as duplicated labels, 
