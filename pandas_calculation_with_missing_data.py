@@ -18,7 +18,7 @@ df2.loc[3,'B'] = np.nan
 
 # Output the dataframe
 print(df)
-print('\n a new dataframe \n ', df2)
-
+# print('\n a new dataframe \n ', df2)
 result = df + df2
 print("\nResult of adding df and df2:\n", result)
+
