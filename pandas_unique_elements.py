@@ -28,3 +28,8 @@ print("Unique elements in column 'B':")
 print(unique_B)
 
 # Count Unique Values using the value_counts()
+# Count the frequency of unique values in column 'B'
+result = df['B'].value_counts()
+
+print('\nThe unique values:')
+print(result)
