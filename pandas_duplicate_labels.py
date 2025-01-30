@@ -20,3 +20,12 @@ print("Is row index is unique:",df.index.is_unique)
 
 # Check if the column index is unique
 print('Is column index is unique:',df.columns.is_unique) 
+
+
+# Detecting the duplicate labels
+'''
+The Index.duplicated() method is used to detect duplicates labels of Pandas object, 
+it returns a boolean array indicating whether each label in the Index is duplicated.
+'''
+# Identify duplicated row labels
+print('Duplicated Row Labels:', df.index.duplicated())
