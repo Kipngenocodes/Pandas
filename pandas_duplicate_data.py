@@ -13,3 +13,14 @@ df = pd.DataFrame({ 'Name': ['Tom', 'Nick', 'John', 'Tom', 'John'],
                    'Score': [90, 85, 88, 90, 88]})
 # Output original dataframe
 print("Original DataFrame:\n", df)
+'''
+Pandas DataFrame.duplicated() method is used to identify duplicate rows in a DataFrame.
+    False: The row is not a duplicate (i.e., it's the first occurrence).
+    True: The row is a duplicate of another row in the DataFrame.
+'''
+
+# finding duplicate rows in the dataframe
+results = df.duplicated()
+
+# output the results 
+print('\n Showing the duplicates in dataframe\n', results)
