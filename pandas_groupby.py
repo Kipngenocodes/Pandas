@@ -24,3 +24,8 @@ obj.groupby(key,axis=1)
 # View group
 print (df.groupby('Team').groups)
 
+# Select a group 
+print (df.groupby('Team').get_group('Riders'))
+
+# Aggregation of groups
+print(df.groupby('Team')['Points'].sum())
