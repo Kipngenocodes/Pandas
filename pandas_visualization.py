@@ -18,3 +18,7 @@ df.plot(kind='bar')
 
 # Display the plot
 plt.show()
+
+df.plot.barh(stacked=True)
+
+plt.show()
